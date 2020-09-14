@@ -4,6 +4,7 @@ const qdb = require('quick.db');
 const db = new qdb.table("ayarlar");
 const fs = require("fs");
 const conf = require("./ayarlar.json");
+// Yashinu ve Alosha tarafından kodlanmıştır.
 
 global.conf = conf; // guildMemberAdd, userUpdate gibi etkinliklerde işimiz kolaylaşsın.
 const commands = new Map();
