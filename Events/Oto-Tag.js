@@ -3,7 +3,7 @@ const qdb = require("quick.db");
 const db = new qdb.table("ayarlar");
 const cdb = new qdb.table("cezalar");
 module.exports = (oldUser, newUser) => {
-  if(oldUser.username == newUser.username || newUser.bot) return;
+  if(oldUser.username == newUser.username || oldUser.bot || newUser.bot) return;
   let ayarlar = db.get(`ayar`) || {};
   if(!ayarlar.tag) return;
   let client = oldUser.client;
@@ -13,7 +13,7 @@ module.exports = (oldUser, newUser) => {
   if(!user) return;
   const embed = new discord.MessageEmbed().setAuthor(user.displayName, user.user.avatarURL({dynamic: true})).setFooter("YASHINU ❤️ ALOSHA").setColor(client.randomColor()).setTimestamp();
   let log = client.channels.cache.get(ayarlar.ekipLogKanali);
-  let yasakTaglilar = cdb.get('yasakTaglilar') || [];
+  let yasakTaglilar = db.get('yasakTaglilar') || [];
 
   if ((ayarlar.yasakTaglar && ayarlar.yasakTaglar.some(tag => newUser.username.includes(tag))) && (ayarlar.jailRolu && !user.roles.cache.has(ayarlar.jailRolu))) {
     user.roles.set(user.roles.cache.has(ayarlar.boosterRolu) ? [ayarlar.boosterRolu, ayarlar.jailRolu] : [ayarlar.jailRolu]).catch();
