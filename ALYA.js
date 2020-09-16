@@ -3,8 +3,6 @@ const client = global.client = new Client({fetchAllMembers: true});
 const qdb = require('quick.db');
 const db = new qdb.table("ayarlar");
 const fs = require("fs");
-const mongoose = require('mongoose');
-mongoose.connect('', {useNewUrlParser: true, useUnifiedTopology: true}); // Mongo connect urlsi
 const conf = require("./ayarlar.json");
 global.conf = conf; // guildMemberAdd, userUpdate gibi etkinliklerde işimiz kolaylaşsın.
 
@@ -64,18 +62,18 @@ client.emojiSayi = function(sayi) {
 };
 
 client.emojiler = {
-  onay: "",
-  iptal: "",
-  cevrimici: "",
-  rahatsizetmeyin: "",
-  bosta: "",
-  gorunmez: "",
-  erkekEmoji: "",
-  kizEmoji: "",
-  gif1: "",
-  gif2: "",
-  gif3: "",
-  gif4: ""
+  onay: "583110927034089473",
+  iptal: "583110878891868180",
+  cevrimici: "719668543318130689",
+  rahatsizetmeyin: "719668434811486208",
+  bosta: "719668583243972718",
+  gorunmez: "719668505846349864",
+  erkekEmoji: "719668058129432607",
+  kizEmoji: "719668167936311307",
+  gif1: "612081152064356383",
+  gif2: "677510219076730880",
+  gif3: "583136913343643668",
+  gif4: "677510125099024395"
 };
 
 global.emoji = client.emoji = function(x) {
