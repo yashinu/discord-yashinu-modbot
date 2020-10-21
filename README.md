@@ -1,6 +1,7 @@
-## Proje geçicidir, sorunları bulunmaktadır, yakında kullanıma hazır hali paylaşılacaktır.
+## Proje kasıtlı olarak kullanacak kişilerin sorunları kendi başlarına çözmeleri için eksik ve hatalı paylaşılmıştır, zamanla eksikler ve hatalar düzeltilecektir.
+## Panel komutundan sunucu bilgilerini ve ALYA.js adlı dosyadan emoji ID'lerini girmeyi unutmayın.
 
-## Selam dostlarım, bir iki ay önce kullandığım sunucuya özel botlarımı açık kaynak olarak herkese açık bir şekilde paylaşmaya karar verdim. Kullanımıyla alakalı ve diğer şeylerle ilgili destek/yardım almak için aşağıya bırakacağım topluluk sunucumuzdan yardım alabilirsiniz.
+## Selam dostlarım, bir süre önce kullandığım sunucuya özel botlarımı açık kaynak olarak herkese açık bir şekilde paylaşmaya karar verdim. Kullanımıyla alakalı ve diğer şeylerle ilgili destek/yardım almak için aşağıya bırakacağım topluluk sunucumuzdan yardım alabilirsiniz.
 
 #Yashinu#0001
 #Alosha#0001
