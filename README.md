@@ -3,8 +3,7 @@
 
 ## Selam dostlarım, bir süre önce kullandığım sunucuya özel botlarımı açık kaynak olarak herkese açık bir şekilde paylaşmaya karar verdim. Kullanımıyla alakalı ve diğer şeylerle ilgili destek/yardım almak için aşağıya bırakacağım topluluk sunucumuzdan yardım alabilirsiniz.
 
-#Yashinu#0001
-#Alosha#0001
+# Yashinu & Alosha
 
  Projenin ücretli satılması veya başkası tarafından, başka bir ad ile dağıtılması kesinlikle yasaktır. Proje lisanslı bir projedir, bu tarz işlemlerde bulunanlar olur ise lisans aracılığı ile gerekli yasal yollara başvurulacaktır.
 <p align="center">
