@@ -36,13 +36,6 @@ function checkRoles() {
       }, index*30000);
     });
   };
-  // Taglı alım için tarama
-  client.guilds.cache.get(conf.sunucuId).members.cache.filter(uye => !uye.roles.cache.has("viproluidsi") && !uye.roles.cache.has(ayar.boosterRolu) && !uye.user.bot && !uye.roles.cache.has(ayar.jailRolu) && !uye.roles.cache.has("") && !uye.user.username.includes(ayar.tag) && !ayar.teyitsizRolleri.some(x => uye.roles.cache.has(x))).array().forEach((uye, index) => {
-    setTimeout(() => {
-      uye.roles.set(ayar.teyitsizRolleri);
-    }, index*3000);
-  });
-// Tag
 
   // Yasaklı tag tarama
   for (let kisi of yasakTaglilar) {
