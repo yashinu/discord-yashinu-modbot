@@ -32,7 +32,7 @@ function checkRoles() {
     client.guilds.cache.get(conf.sunucuId).members.cache.filter(uye => uye.user.username.includes(ayar.tag) && !uye.roles.cache.has(ayar.boosterRolu) && (!uye.roles.cache.has(ayar.ekipRolu) || !uye.displayName.startsWith(ayar.tag))).array().forEach((uye, index) => {
       setTimeout(() => {
         uye.setNickname(uye.displayName.replace(ayar.ikinciTag, ayar.tag));
-        uye.roles.add(ayar.ekipRolu);
+        if (ayar.ekipRolu) uye.roles.add(ayar.ekipRolu);
       }, index*30000);
     });
   };
