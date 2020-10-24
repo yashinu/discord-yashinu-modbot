@@ -21,9 +21,9 @@ module.exports.onLoad = (client) => {
     message.channel.send(embed.setDescription(`${message.author} artık AFK değilsin!`)).then(x => x.delete({timeout: 5000}));
   });
 }
-module.exports.execute = (client, message, args, ayar, emoji) => {
+module.exports.execute = async (client, message, args, ayar, emoji) => {
   let sebep = args.join(' ');
-  if (sebep && client.chatKoruma(sebep) == true) return message.reply('Geçerli bir AFK sebebi belirtmelisin!').then(x => x.delete({timeout: 5000}));;
+  if (sebep && (await client.chatKoruma(sebep))) return message.reply('Geçerli bir AFK sebebi belirtmelisin!').then(x => x.delete({timeout: 5000}));;
   if (sebep) db.set(`${message.author.id}.afk.sebep`, sebep);
   db.set(`${message.author.id}.afk.sure`, new Date());
   if (message.member.manageable) message.member.setNickname(`[AFK]${message.member.displayName}`).catch(console.log);
