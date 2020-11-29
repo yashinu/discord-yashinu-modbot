@@ -135,32 +135,6 @@ client.chatKoruma = async mesajIcerik => {
   return false;
 };
 
-client.splitEmbedWithDesc = async function(description, author = false, footer = false, features = false) {
-  let embedSize = parseInt(`${description.length/2048}`.split('.')[0])+1
-  let embeds = new Array()
-  for (var i = 0; i < embedSize; i++) {
-    let desc = description.split("").splice(i*2048, (i+1)*2048)
-    let x = new MessageEmbed().setDescription(desc.join(""))
-    if (i == 0 && author) x.setAuthor(author.name, author.icon ? author.icon : null)
-    if (i == embedSize-1 && footer) x.setFooter(footer.name, footer.icon ? footer.icon : null)
-    if (i == embedSize-1 && features && features["setTimestamp"]) x.setTimestamp(features["setTimestamp"])
-    if (features) {
-      let keys = Object.keys(features)
-      keys.forEach(key => {
-        if (key == "setTimestamp") return
-        let value = features[key]
-        if (i !== 0 && key == 'setColor') x[key](value[0])
-        else if (i == 0) {
-          if(value.length == 2) x[key](value[0], value[1])
-          else x[key](value[0])
-        }
-      })
-    }
-    embeds.push(x)
-  }
-  return embeds
-};
-
 Date.prototype.toTurkishFormatDate = function (format) {
   let date = this,
     day = date.getDate(),
